@@ -2,11 +2,13 @@
 
 ![Integration tests](https://github.com/coreruleset/zitadel-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
 
-The CRS plugin documentation can be found on the [website](https://coreruleset.org/docs/configuring/plugins/).
+This is a 3rd party OWASP CRS Rule Exclusions Plugin for users running Zitadel, an IDP with OIDC and Oauth2 capabilities.
 
 This repo lives at [git.open.engineering](https://git.open.engineering/oeng/zitadel-rule-exclusions-plugin) but is mirrored to the following locations:
 - [Codeberg](https://codeberg.org/open-engineering/zitadel-rule-exclusions-plugin)
 - [GitHub](https://github.com/jessebot/zitadel-rule-exclusions-plugin)
+
+The CRS plugin documentation can be found on the [website](https://coreruleset.org/docs/configuring/plugins/).
 
 ## Testing
 
