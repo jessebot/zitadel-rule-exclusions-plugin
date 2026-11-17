@@ -1,12 +1,12 @@
 # OWASP CRS - Zitadel Rule Exclusions Plugin
 
-![Integration tests](https://github.com/coreruleset/forgejo-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
+![Integration tests](https://github.com/coreruleset/zitadel-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
 
 The CRS plugin documentation can be found on the [website](https://coreruleset.org/docs/configuring/plugins/).
 
-This repo lives at [git.open.engineering](https://git.open.engineering/oeng/forgejo-rule-exclusions-plugin) but is mirrored to the following locations:
-- [Codeberg](https://codeberg.org/open-engineering/forgejo-rule-exclusions-plugin)
-- [GitHub](https://github.com/jessebot/forgejo-rule-exclusions-plugin)
+This repo lives at [git.open.engineering](https://git.open.engineering/oeng/zitadel-rule-exclusions-plugin) but is mirrored to the following locations:
+- [Codeberg](https://codeberg.org/open-engineering/zitadel-rule-exclusions-plugin)
+- [GitHub](https://github.com/jessebot/zitadel-rule-exclusions-plugin)
 
 ## Testing
 
