@@ -1,0 +1,24 @@
+---
+meta:
+  author: "Jesse Hitch"
+  description: "Zitadel Rule Exclusions Plugin admin check management endpoints"
+rule_id: 9535010
+tests:
+  - test_id: 1
+    desc: Check if an admin user can check their granted projects
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/grpc-web+proto
+          port: 80
+          method: POST
+          uri: /zitadel.management.v1.ManagementService/ListGrantedProjects
+          data: |
+            text
+        output:
+          log:
+            no_expect_ids: [920420]

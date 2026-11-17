@@ -1,0 +1,24 @@
+---
+meta:
+  author: "Jesse Hitch"
+  description: "Zitadel Rule Exclusions Plugin check instance features"
+rule_id: 9535007
+tests:
+  - test_id: 1
+    desc: Check if a user can check instance features
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/grpc-web+proto
+          port: 80
+          method: POST
+          uri: /zitadel.feature.v2.FeatureService/GetInstanceFeatures
+          data: |
+            text
+        output:
+          log:
+            no_expect_ids: [920420]

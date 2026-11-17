@@ -1,0 +1,24 @@
+---
+meta:
+  author: "Jesse Hitch"
+  description: "Zitadel Rule Exclusions Plugin AuthService endpoint checks"
+rule_id: 9535005
+tests:
+  - test_id: 1
+    desc: Check if a user can auth and get project orgs
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/grpc-web+proto
+          port: 80
+          method: POST
+          uri: /zitadel.auth.v1.AuthService/ListMyProjectOrgs
+          data: |
+            text
+        output:
+          log:
+            no_expect_ids: [920420]
