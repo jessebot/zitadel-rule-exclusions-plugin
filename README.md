@@ -1,6 +1,6 @@
 # OWASP CRS - Zitadel Rule Exclusions Plugin
 
-![Integration tests](https://github.com/coreruleset/zitadel-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
+![Integration tests](https://github.com/jessebot/zitadel-rule-exclusions-plugin/actions/workflows/integration.yml/badge.svg)
 
 This is a 3rd party OWASP CRS Rule Exclusions Plugin for users running Zitadel, an IDP with OIDC and Oauth2 capabilities.
 
