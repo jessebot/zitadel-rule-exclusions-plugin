@@ -2,7 +2,7 @@
 meta:
   author: "Jesse Hitch"
   description: "Zitadel Rule Exclusions Plugin for account info"
-rule_id: 9535012
+rule_id: 9535205
 tests:
   - test_id: 1
     desc: Check if a user can login and get account info
@@ -22,5 +22,4 @@ tests:
         output:
           log:
             no_expect_ids:
-              - 920420
               - 942290
