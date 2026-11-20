@@ -1,0 +1,26 @@
+---
+meta:
+  author: "Jesse Hitch"
+  description: "Zitadel Rule Exclusions Plugin for account info"
+rule_id: 9535012
+tests:
+  - test_id: 1
+    desc: Check if a user can login and get account info
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: application/json
+          port: 80
+          method: POST
+          uri: /ui/v2/login/accounts?requestId=oidc_V2_000000000000000000
+          data: |-
+            [{"$typeName":"zitadel.session.v2.Session","id":"000000000000000000","sequence":"$n7","metadata":{},"creationDate":{"$typeName":"google.protobuf.Timestamp","seconds":"$n1795211764","nanos":154988000},"changeDate":{"$typeName":"google.protobuf.Timestamp","seconds":"$n1795211768","nanos":279381000},"factors":{"$typeName":"zitadel.session.v2.Factors","user":{"$typeName":"zitadel.session.v2.UserFactor","id":"385691641911967922","loginName":"testuser","displayName":"Test Lastname","organizationId":"000000000000000000","verifiedAt":{"$typeName":"google.protobuf.Timestamp","seconds":"$n1795211764","nanos":154629000}},"password":{"$typeName":"zitadel.session.v2.PasswordFactor","verifiedAt":{"$typeName":"google.protobuf.Timestamp","seconds":"$n1795211768","nanos":279044000}}},"userAgent":{"$typeName":"zitadel.session.v2.UserAgent","header":{"user-agent":{"$typeName":"zitadel.session.v2.UserAgent.HeaderValues","values":["Mozilla/5.0 (X11; Linux x86_64; rv:159.0) Gecko/20100101 Firefox/159.0"]}},"fingerprintId":"5bb7d3b8-be34-472e-a3a0-529652412166","ip":"192.168.1.1","description":"Firefox, 159.0, ,    , Gecko, 159.0, , Linux, x86_64, "},"expirationDate":{"$typeName":"google.protobuf.Timestamp","seconds":"$n1796075768","nanos":279381000},"requestId":"oidc_V2_000000000000000000"}]
+        output:
+          log:
+            no_expect_ids:
+              - 920420
+              - 942290
