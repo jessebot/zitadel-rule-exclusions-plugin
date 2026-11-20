@@ -16,7 +16,7 @@ tests:
             Content-Type: text/plain
           port: 80
           method: POST
-          uri: /ui/v2/login/password?loginName=someuser&altPassword=true&organization=000000000000000000&requestId=oidc_V2_000000000000000000
+          uri: /ui/v2/login/password?loginName=someuser&altPassword=true&requestId=oidc_V2_000000000000000000&organization=000000000000000000
           data: |
             [{"loginName":"someuser","sessionId":"$undefined","organization":"000000000000000000","challenges":{"$typeName":"zitadel.session.v2.RequestChallenges","webAuthN":{"$typeName":"zitadel.session.v2.RequestChallenges.WebAuthN","domain":"","userVerificationRequirement":1}},"requestId":"oidc_V2_000000000000000000"}]
         output:
