@@ -1,0 +1,43 @@
+---
+meta:
+  author: "Jesse Hitch"
+  description: "Zitadel Rule Exclusions Plugin for logins"
+rule_id: 9535011
+tests:
+  - test_id: 1
+    desc: Check if a user can wuth to the password endpoint
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: text/plain
+          port: 80
+          method: POST
+          uri: /ui/v2/login/password?loginName=someuser&organization=000000000000000000&requestId=oidc_V2_000000000000000000
+          data: |
+            text
+        output:
+          log:
+            no_expect_ids: [920420]
+
+  - test_id: 2
+    desc: Check if a user can wuth to the u2f endpoint
+    stages:
+      - input:
+          dest_addr: 127.0.0.1
+          headers:
+            Host: localhost
+            User-Agent: OWASP CRS
+            Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+            Content-Type: text/plain
+          port: 80
+          method: POST
+          uri: /ui/v2/login/u2f?loginName=someuser&organization=000000000000000000&requestId=oidc_V2_000000000000000000
+          data: |
+            text
+        output:
+          log:
+            no_expect_ids: [920420]
