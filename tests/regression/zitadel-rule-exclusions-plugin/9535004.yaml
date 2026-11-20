@@ -18,7 +18,7 @@ tests:
           method: POST
           uri: /ui/v2/login/password?loginName=someuser&requestId=oidc_V2_000000000000000000&organization=000000000000000000
           data: |
-            text
+            [{"loginName":"someuser","organization":"000000000000000000","defaultOrganization":"$undefined","checks":{"$typeName":"zitadel.session.v2.Checks","password":{"$typeName":"zitadel.session.v2.CheckPassword","password":"aaaaaaaaaaaaaaa"}},"requestId":"oidc_V2_000000000000000000"}]
         output:
           log:
             no_expect_ids: [920420]
