@@ -21,4 +21,6 @@ tests:
             [{"loginName":"someuser","sessionId":"$undefined","organization":"000000000000000000","challenges":{"$typeName":"zitadel.session.v2.RequestChallenges","webAuthN":{"$typeName":"zitadel.session.v2.RequestChallenges.WebAuthN","domain":"","userVerificationRequirement":1}},"requestId":"oidc_V2_000000000000000000"}]
         output:
           log:
-            no_expect_ids: [920420]
+            no_expect_ids:
+              - 920420
+              - 942290
