@@ -2,7 +2,7 @@
 meta:
   author: "Jesse Hitch"
   description: "Zitadel Rule Exclusions Plugin auth endpoint checks"
-rule_id: 9535004
+rule_id: 9535204
 tests:
   - test_id: 1
     desc: Check if a user can wuth to the password endpoint
