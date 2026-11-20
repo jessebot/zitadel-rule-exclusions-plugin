@@ -13,12 +13,13 @@ tests:
             Host: localhost
             User-Agent: OWASP CRS
             Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-            Content-Type: text/plain
+            Content-Type: application/json
           port: 80
           method: POST
           uri: /ui/v2/login/otp/time-based?loginName=someuser&requestId=oidc_V2_000000000000000000&organization=000000000000000000
           data: |
-            [{"loginName":"testuser","sessionId":"$undefined","organization":"000000000000000000","checks":{"totp":{"$typeName":"zitadel.session.v2.CheckTOTP","code":"999999"}},"requestId":"oidc_V2_000000000000000000"}]
+            [{"loginName":"testuser","sessionId":"$undefined","organization":"000000000000000000","checks":{"$typeName":"zitadel.session.v2.Checks","totp":{"$typeName":"zitadel.session.v2.CheckTOTP","code":"999999"}},"requestId":"oidc_V2_000000000000000000"}]⏎
+
         output:
           log:
             no_expect_ids: [920420]
