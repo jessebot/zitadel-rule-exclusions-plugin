@@ -18,7 +18,7 @@ tests:
           method: POST
           uri: /management/v1/users/human/_import
           data: |-
-            {"userName": username, "profile": { "nickName": "friend", "preferredLanguage": "en" }, "email": { "email": email, "isEmailVerified": True }, "password": password, "passwordChangeRequired": True, }
+            {"userName": "username", "profile": { "nickName": "friend", "preferredLanguage": "en" }, "email": { "email": "email", "isEmailVerified": True}, "password": "password", "passwordChangeRequired": True }
         output:
           log:
             no_expect_ids: [930120]
